@@ -4,6 +4,9 @@ import keyboard as StayAwake_Keyboard
 import time
 import threading
 
+
+# Created by Umair Khalid (Github: RealXicor)
+
 StayAwake_Mouse = Controller()
 
 stop_event = threading.Event()
