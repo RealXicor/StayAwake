@@ -1,4 +1,4 @@
-from pynput.mouse import Controller
+from pynput.mouse import Controller, Button
 from pynput import mouse as StayAwake_Mouse
 import keyboard as StayAwake_Keyboard
 import time
@@ -21,6 +21,8 @@ def keep_me_alive():
     while not stop_event.is_set():
         StayAwake_Mouse.move(500, 0)
         time.sleep(5)
+        StayAwake_Mouse.press(Button.left)
+        StayAwake_Mouse.release(Button.left)
         StayAwake_Mouse.move(-500, 0)
         time.sleep(5)
 
